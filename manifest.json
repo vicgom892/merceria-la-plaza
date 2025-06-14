@@ -1,0 +1,26 @@
+{
+  "name": "Mercería La Plaza",
+  "short_name": "La Plaza",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5e6cc",
+  "theme_color": "#6b4e31",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

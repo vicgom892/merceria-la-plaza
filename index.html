@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mercería La Plaza ofrece hilos, telas, botones y accesorios de costura de alta calidad en General Rodríguez, Buenos Aires. Envíos nacionales e internacionales.">
+  <meta name="keywords" content="mercería, hilos, telas, botones, accesorios de costura, General Rodríguez, Buenos Aires, estampados, costura, bordado">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mercería La Plaza">
+  <meta name="geo.region" content="AR-B">
+  <meta name="geo.placename" content="General Rodríguez">
+  <link rel="canonical" href="https://www.mercerialaplaza.com/">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Mercería La Plaza - Tu Tienda de Costura en General Rodríguez">
+  <meta property="og:description" content="Encuentra hilos, telas, botones y accesorios de costura de calidad en Mercería La Plaza. Envíos rápidos a todo el país.">
+  <meta property="og:image" content="https://www.mercerialaplaza.com/images/icon-96x96.webp">
+  <meta property="og:url" content="https://www.mercerialaplaza.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mercería La Plaza">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mercería La Plaza - Hilos, Telas y Accesorios de Costura">
+  <meta name="twitter:description" content="Descubre nuestra amplia selección de productos de mercería en General Rodríguez, Buenos Aires.">
+  <meta name="twitter:image" content="https://www.mercerialaplaza.com/images/icon-96x96.webp">
+  <link rel="icon" href="images/icon-96x96.webp" type="image/webp">
+  <title>Mercería La Plaza - Hilos, Telas y Accesorios de Costura en General Rodríguez</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6b4e31">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/carousel.css" media="print" onload="this.media='all'">
+  <style>
+    /* CSS crítico para splash screen, header y banner */
+    body { margin: 0; font-family: 'Roboto', sans-serif; }
+    #splash { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #fff; }
+    #splash img { width: 50px; height: 50px; }
+    #splash h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #6b4e31; }
+    #splash p { font-size: 1rem; color: #333; }
+    header { background: #6b4e31; padding: 0.5rem; }
+    .logo img { width: 50px; height: 50px; }
+    .nav-links { display: flex; gap: 1rem; list-style: none; }
+    .nav-links a { color: #fff; text-decoration: none; }
+    .menu-toggle { display: none; font-size: 1.5rem; color: #fff; cursor: pointer; }
+    .cart-btn { background: #fff; color: #6b4e31; padding: 0.5rem 1rem; border: none; cursor: pointer; }
+    .banner { background: #f4f4f4; padding: 2rem; text-align: center; }
+    .banner h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #6b4e31; }
+    .banner p { font-size: 1.2rem; color: #333; }
+    .banner a { background: #6b4e31; color: #fff; padding: 0.8rem 1.5rem; text-decoration: none; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Pantalla de carga -->
+  <div id="splash">
+    <img src="images/icon-50x50.webp" srcset="images/icon-50x50.webp 50w, images/icon-96x96.webp 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
+    <h1>Mercería La Plaza</h1>
+    <p>Cargando...</p>
+  </div>
+
+  <header>
+    <nav role="navigation" aria-label="Menú principal">
+      <div class="logo">
+        <img src="images/icon-50x50.webp" srcset="images/icon-50x50.webp 50w, images/icon-96x96.webp 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#products">Todos los Productos</a></li>
+        <li><a href="#hilos">Hilos</a></li>
+        <li><a href="#telas">Telas</a></li>
+        <li><a href="#botones">Botones</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button id="cart-button" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)
+      </button>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <section id="inicio" class="intro">
+      <h2>Bienvenidos a Mercería La Plaza</h2>
+      <p>Tu tienda de confianza en General Rodríguez para hilos, telas, botones y accesorios de costura de alta calidad.</p>
+    </section>
+
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Tu Mercería de Confianza en General Rodríguez</h1>
+        <p>Estampados únicos y artículos de calidad para tus proyectos de costura y bordado</p>
+        <a href="#products">Ver Productos</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <h2>Nuestros Productos</h2>
+      <div class="products-carousel">
+        <div class="products-wrapper">
+          <div class="product">
+            <img src="images/ahuja.jpg" srcset="images/ahuja.jpg 200w, images/ahuja.jpg 400w" sizes="(max-width: 600px) 200px, 400px" alt="Hilo de Algodón de Alta Calidad" width="200" height="200" loading="lazy">
+            <h3>Hilo de Algodón</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/bobina-de-hilo.jpg" srcset="images/bobina-de-hilo.jpg 200w, images/bobina-de-hilo.jpg 400w" sizes="(max-width: 600px) 200px, 400px" alt="Tijera de Costura Profesional" width="200" height="200" loading="lazy">
+            <h3>Tijera Profesional</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/hilo.jpg" srcset="images/hilo.jpg 200w, images/hilo.jpg 400w" sizes="(max-width: 600px) 200px, 400px" alt="Aguja para Bordado" width="200" height="200" loading="lazy">
+            <h3>Aguja para Bordado</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/bobina-de-hilo.webp" srcset="images/bobina-de-hilo.webp 200w, images/bobina-de-hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Bobina de Hilo Resistente" width="200" height="200" loading="lazy">
+            <h3>Bobina de Hilo</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/botones.webp" srcset="images/botones.webp 200w, images/botones.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Botones Decorativos" width="200" height="200" loading="lazy">
+            <h3>Botones Decorativos</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <!-- Repetimos para efecto infinito -->
+          <div class="product">
+            <img src="images/lana.jpg" srcset="images/lana.jpg 200w, images/lana.jpg 400w" sizes="(max-width: 600px) 200px, 400px" alt="Hilo de Algodón de Alta Calidad" width="200" height="200" loading="lazy">
+            <h3>Hilo de Algodón</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/tijera.webp" srcset="images/tijera.webp 200w, images/tijera.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Tijera de Costura Profesional" width="200" height="200" loading="lazy">
+            <h3>Tijera Profesional</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/ahuja.webp" srcset="images/ahuja.webp 200w, images/ahuja.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Aguja para Bordado" width="200" height="200" loading="lazy">
+            <h3>Aguja para Bordado</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/bobina-de-hilo.webp" srcset="images/bobina-de-hilo.webp 200w, images/bobina-de-hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Bobina de Hilo Resistente" width="200" height="200" loading="lazy">
+            <h3>Bobina de Hilo</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+          <div class="product">
+            <img src="images/botones.webp" srcset="images/botones.webp 200w, images/botones.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Botones Decorativos" width="200" height="200" loading="lazy">
+            <h3>Botones Decorativos</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="products" id="products">
+        <h2>Todos los Productos de Costura</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/ahuja.webp" srcset="images/ahuja.webp 200w, images/ahuja.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Hilos de Algodón de Alta Calidad" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Hilos de Algodón</h3>
+              <p class="price">Precio: $120 ARS</p>
+              <p>Hilos de algodón de alta calidad, ideales para costura y bordado.</p>
+              <button onclick="addToCart({id:1, name:'Hilos de Algodón', price:120})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/bobina-de-hilo.webp" srcset="images/bobina-de-hilo.webp 200w, images/bobina-de-hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Telas con Estampado Vintage" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Estampado Vintage</h3>
+              <p class="price">Precio: $350 ARS</p>
+              <p>Telas con diseños retro, perfectas para proyectos decorativos.</p>
+              <button onclick="addToCart({id:2, name:'Estampado Vintage', price:350})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/botones.webp" srcset="images/botones.webp 200w, images/botones.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Botones Clásicos de Madera" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Botones Clásicos</h3>
+              <p class="price">Precio: $50 ARS</p>
+              <p>Botones de madera con estilo vintage, paquete de 10 unidades.</p>
+              <button onclick="addToCart({id:3, name:'Botones Clásicos', price:50})">Agregar al Carrito</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products section-bg" id="hilos">
+        <h2>Hilos para Costura y Bordado</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/hilo.webp" srcset="images/hilo.webp 200w, images/hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Hilo de Seda Natural" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Hilo de Seda</h3>
+              <p class="price">Precio: $200 ARS</p>
+              <p>Hilo de seda natural, suave y resistente, ideal para bordados finos.</p>
+              <button onclick="addToCart({id:4, name:'Hilo de Seda', price:200})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/icon-50x50.webp" srcset="images/icon-50x50.webp 50w, images/icon-96x96.webp 96w" sizes="(max-width: 600px) 50px, 96px" alt="Hilo de Lino Ecológico" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Hilo de Lino</h3>
+              <p class="price">Precio: $150 ARS</p>
+              <p>Hilo de lino ecológico, perfecto para proyectos rústicos.</p>
+              <button onclick="addToCart({id:5, name:'Hilo de Lino', price:150})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/hilo.webp" srcset="images/hilo.webp 200w, images/hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Hilo de Poliéster Resistente" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Hilo de Poliéster</h3>
+              <p class="price">Precio: $130 ARS</p>
+              <p>Hilo de poliéster duradero para costuras resistentes.</p>
+              <button onclick="addToCart({id:12, name:'Hilo de Poliéster', price:130})">Agregar al Carrito</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products section-bg" id="telas">
+        <h2>Telas para Proyectos de Costura</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/tijera.webp" srcset="images/tijera.webp 200w, images/tijera.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Tela de Algodón Floral para Vestidos" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Tela de Algodón Floral</h3>
+              <p class="price">Precio: $400 ARS</p>
+              <p>Tela de algodón con estampado floral, ideal para vestidos y cortinas.</p>
+              <button onclick="addToCart({id:6, name:'Tela de Algodón Floral', price:400})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/lana.webp" srcset="images/lana.webp 200w, images/lana.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Tela de Lino Natural de Alta Calidad" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Tela de Lino Natural</h3>
+              <p class="price">Precio: $500 ARS</p>
+              <p>Lino de alta calidad, suave y duradero, para proyectos elegantes.</p>
+              <button onclick="addToCart({id:7, name:'Tela de Lino Natural', price:500})">Agregar al Carrito</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products section-bg" id="botones">
+        <h2>Botones para Ropa y Manualidades</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/ahuja.webp" srcset="images/ahuja.webp 200w, images/ahuja.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Botones de Nácar Brillantes" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Botones de Nácar</h3>
+              <p class="price">Precio: $80 ARS</p>
+              <p>Botones de nácar brillantes, perfectos para camisas y blusas.</p>
+              <button onclick="addToCart({id:8, name:'Botones de Nácar', price:80})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/bobina-de-hilo.webp" srcset="images/bobina-de-hilo.webp 200w, images/bobina-de-hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Botones de Metal Grabados" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Botones de Metal</h3>
+              <p class="price">Precio: $100 ARS</p>
+              <p>Botones metálicos con diseño grabado, ideales para chaquetas.</p>
+              <button onclick="addToCart({id:9, name:'Botones de Metal', price:100})">Agregar al Carrito</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products section-bg" id="accesorios">
+        <h2>Accesorios de Costura</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/botones.webp" srcset="images/botones.webp 200w, images/botones.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Cinta Métrica Flexible" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Cinta Métrica</h3>
+              <p class="price">Precio: $60 ARS</p>
+              <p>Cinta métrica flexible, ideal para tomar medidas precisas.</p>
+              <button onclick="addToCart({id:10, name:'Cinta Métrica', price:60})">Agregar al Carrito</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/hilo.webp" srcset="images/hilo.webp 200w, images/hilo.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Kit de Agujas para Costura" width="250" height="200" loading="lazy">
+            <div>
+              <h3>Kit de Agujas</h3>
+              <p class="price">Precio: $90 ARS</p>
+              <p>Juego de agujas variadas para costura y bordado.</p>
+              <button onclick="addToCart({id:11, name:'Kit de Agujas', price:90})">Agregar al Carrito</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="container" id="testimonials">
+        <h2>Testimonios de Clientes</h2>
+        <div class="testimonials-carousel">
+          <div class="testimonials-wrapper">
+            <div class="testimonial">
+              <img src="images/tijera.webp" srcset="images/tijera.webp 200w, images/tijera.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Foto de María González" width="100" height="100" loading="lazy">
+              <p>"¡Un servicio increíble! Superaron mis expectativas en todos los sentidos."</p>
+              <h3>María González</h3>
+            </div>
+            <div class="testimonial">
+              <img src="images/ahuja.webp" srcset="images/ahuja.webp 200w, images/ahuja.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Foto de Juan Pérez" width="100" height="100" loading="lazy">
+              <p>"Productos de alta calidad y entrega rápida. ¡Recomendado!"</p>
+              <h3>Juan Pérez</h3>
+            </div>
+            <div class="testimonial">
+              <img src="images/botones.webp" srcset="images/botones.webp 200w, images/botones.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Foto de Ana López" width="100" height="100" loading="lazy">
+              <p>"El equipo es muy profesional y atento. Volveré sin duda."</p>
+              <h3>Ana López</h3>
+            </div>
+            <div class="testimonial">
+              <img src="images/lana.webp" srcset="images/lana.webp 200w, images/lana.webp 400w" sizes="(max-width: 600px) 200px, 400px" alt="Foto de Carlos Ramírez" width="100" height="100" loading="lazy">
+              <p>"Una experiencia de compra perfecta. Todo impecable."</p>
+              <h3>Carlos Ramírez</h3>
+            </div>
+          </div>
+          <button class="carousel-nav prev" aria-label="Testimonio anterior">&lt;</button>
+          <button class="carousel-nav next" aria-label="Testimonio siguiente">&gt;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <section class="location" id="location">
+        <h2>Nuestra Ubicación en General Rodríguez</h2>
+        <p>Visítanos en nuestra tienda física para descubrir todos nuestros productos y recibir asesoramiento personalizado.</p>
+        <p>Dirección: B1748 Gral. Rodríguez, Provincia de Buenos Aires</p>
+        <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.120517957917!2d-58.89866622437167!3d-34.626394598887096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910e8f01a9b1%3A0x88fe90848cba6976!2sMercer%C3%ADa%20La%20Plaza!5e0!3m2!1ses!2sar!4v1749503100819!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+      <section class="shipping" id="shipping">
+        <h2>Envíos Flexibles Nacionales e Internacionales</h2>
+        <p>Ofrecemos opciones de envío rápidas y confiables para que recibas tus productos de mercería donde estés.</p>
+        <p>Envíos nacionales e internacionales disponibles. Tiempos de entrega: 1-2 días hábiles (Provincia), 7-15 días (Nacional).</p>
+        <p>Costos varían según peso y destino. ¡Contáctanos para más detalles!</p>
+        <a href="https://wa.me/1234567890" class="cart-buttons"><button>🛵 Consultar Envíos</button></a>
+      </section>
+
+      <section class="contact" id="contacto">
+        <h2>Contáctanos</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required>
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+
+    <div id="cart-modal" class="cart-modal hidden" role="dialog" aria-labelledby="cart-title">
+      <div class="cart-content">
+        <h2 id="cart-title">Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <p id="cart-empty">El carrito está vacío.</p>
+        <div id="cart-total"></div>
+        <div class="cart-buttons">
+          <button id="send-whatsapp">Enviar por WhatsApp</button>
+          <button id="pay-mercadopago">Pagar con Mercado Pago</button>
+        </div>
+        <button id="close-cart">Cerrar</button>
+      </div>
+    </div>
+
+    <div id="install-banner" class="install-banner hidden">
+      📲 Instalar la app
+    </div>
+
+    <div id="chatbot">
+      <div id="chatbot-header" onclick="toggleChatbot()">
+        <span>💬</span> <strong>Chatea con nosotros</strong>
+      </div>
+      <div id="chatbot-body" style="display:none;">
+        <div id="chatbot-messages">
+          <div class="bot-message">Hola! ¿En qué podemos ayudarte? Elige una opción o escribe tu consulta.</div>
+        </div>
+        <div id="chatbot-options">
+          <button onclick="sendPredefinedMsg('¿Cuáles son los combos disponibles?')">Combos disponibles</button>
+          <button onclick="sendPredefinedMsg('¿Hacen envíos sin cargo?')">Envíos</button>
+          <button onclick="sendPredefinedMsg('¿Cuál es el horario de atención?')">Horario</button>
+          <button onclick="sendPredefinedMsg('¿Cuál es la forma de pago?')">Forma de pago</button>
+        </div>
+        <form id="chatbot-form" onsubmit="return sendUserMessage(event)">
+          <label for="user-name">Nombre:</label>
+          <input type="text" id="user-name" placeholder="Tu nombre" required>
+          <label for="user-message">Mensaje:</label>
+          <textarea id="user-message" placeholder="Escribe tu consulta..." required></textarea>
+          <button type="submit">Enviar WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <h3>Mercería La Plaza</h3>
+      <p>Síguenos en nuestras redes sociales:</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram de Mercería La Plaza"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook de Mercería La Plaza"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/1234567890" id="whatsapp_link" aria-label="WhatsApp de Mercería La Plaza"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>© 2025 Mercería La Plaza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/chat.js"></script>
+    <script defer src="js/carousel.js"></script>
+    <script>
+      // Carga diferida para Google Maps
+      document.addEventListener('DOMContentLoaded', () => {
+        const maps = document.querySelectorAll('iframe[data-src]');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.src = entry.target.dataset.src;
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        maps.forEach(map => observer.observe(map));
+      });
+    </script>
+</body>
+</html>

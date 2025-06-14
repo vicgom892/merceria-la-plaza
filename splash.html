@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando... | Mercería La Plaza</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f5e6cc;
+      color: #6b4e31;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  
+</head>
+<body>
+  <img src="/images/icon-192x192.png" alt="Logo Mercería La Plaza">
+  <h1>Mercería La Plaza</h1>
+  <p>Cargando la aplicación...</p>
+</body>
+</html>
