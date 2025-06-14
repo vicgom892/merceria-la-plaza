@@ -667,4 +667,7 @@ footer h3 {
   footer{
      margin-bottom: 3rem;
   }
+  .price p{
+  font-size: 14px;
+}
 }
