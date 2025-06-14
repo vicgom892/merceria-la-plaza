@@ -233,6 +233,9 @@ section.products h2 {
   color: var(--primary);
   font-weight: 500;
 }
+.price p{
+  font-size: 14px;
+}
 
 .product-card button {
   width: 100%;
@@ -249,7 +252,10 @@ section.products h2 {
   background-color: var(--accent);
   transform: scale(1.02);
 }
-
+.product-card p{
+  font-size: 14px;
+  padding: 5px;
+}
 .cart-modal {
   position: fixed;
   top: 0;
@@ -667,7 +673,5 @@ footer h3 {
   footer{
      margin-bottom: 3rem;
   }
-  .price p{
-  font-size: 14px;
-}
+  
 }
