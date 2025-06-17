@@ -529,6 +529,11 @@ footer h3 {
     left: 7%;
     transform: translateX(-50%);
   }
+  #chatbot {
+    position: fixed;
+    bottom: 00px;
+    right: 50px;
+  }
 }
 
 .install-banner:hover {
@@ -542,8 +547,8 @@ footer h3 {
 /* Chatbot */
 #chatbot {
   position: fixed;
-  bottom: 0px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   width: 320px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
