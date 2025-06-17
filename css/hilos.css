@@ -143,6 +143,7 @@ font-size: 1.8rem;
 .tarjeta-producto button:hover{
   background-color: #f8dbbf;
   transform: scale(1.05);
+  color: #e74c3c;
 }
 
 @media (max-width: 768px) {
