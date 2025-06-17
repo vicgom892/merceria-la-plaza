@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/hilos.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/carousel.css" media="print" onload="this.media='all'">
@@ -39,8 +39,12 @@
 </body>
 </html>
 
-<a href="index.html" class="boton-flecha" title="Volver al inicio">←</a>
-
+    <!-- Pantalla de carga -->
+    <div id="splash">
+      <img src="images/icon-50x50.webp" srcset="images/icon-50x50.webp 50w, images/icon-96x96.webp 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
+      <h1>Mercería La Plaza</h1>
+      <p>Cargando...</p>
+    </div>
 
     <header>
         <nav role="navigation" aria-label="Menú principal">
@@ -414,9 +418,9 @@
 
 
         <script defer src="js/main.js"></script>
-          <script defer src="js/chat.js"></script>
-          <script defer src="js/carousel.js"></script>
-          <script defer src="js/estampados.js"></script>
+        <script defer src="js/chat.js"></script>
+        <script defer src="js/carousel.js"></script>
+        <script defer src="js/estampados.js"></script>
       
         <script>
           document.querySelectorAll('.rating').forEach(rating => {
