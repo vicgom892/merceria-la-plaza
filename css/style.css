@@ -531,7 +531,7 @@ footer h3 {
   }
   #chatbot {
     position: fixed;
-    bottom: 00px;
+    bottom: 0px;
     right: 50px;
   }
 }
