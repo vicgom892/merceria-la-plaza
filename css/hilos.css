@@ -139,6 +139,12 @@ font-size: 1.8rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+.item button:hover,
+.tarjeta-producto button{
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
   .item {
     flex-direction: column;
