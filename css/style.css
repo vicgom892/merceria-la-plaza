@@ -542,8 +542,8 @@ footer h3 {
 /* Chatbot */
 #chatbot {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 50px;
   width: 320px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
