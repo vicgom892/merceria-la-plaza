@@ -121,7 +121,7 @@ font-size: 1.8rem;
 }
 .item button {
   width: 50%;
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #fff;
   padding: 0.5rem;
   border: none;
@@ -131,7 +131,7 @@ font-size: 1.8rem;
 }
 .tarjeta-producto button {
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #fff;
   padding: 0.5rem;
   border: none;
@@ -140,8 +140,8 @@ font-size: 1.8rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .item button:hover,
-.tarjeta-producto button{
-  background-color: var(--accent);
+.tarjeta-producto button:hover{
+  background-color: #f8dbbf;
   transform: scale(1.05);
 }
 
