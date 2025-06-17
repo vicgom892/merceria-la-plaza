@@ -17,6 +17,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text);
   background: var(--bg);
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -24,7 +25,7 @@ h1, h2, h3 {
 }
 
 header {
-  background: var(--bg);
+  background: #6b4e31; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   position: sticky;
@@ -48,7 +49,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-links li a {
@@ -58,6 +59,9 @@ nav {
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
+}
+.nav-links li a span{
+  color: #ff6b6b;
 }
 
 .nav-links li a::after {
@@ -81,8 +85,8 @@ nav {
 }
 
 .cart-btn {
-  background-color: var(--primary);
-  color: #fff;
+  background-color: #fff;
+  color: var(--primary);
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.375rem;
@@ -100,7 +104,7 @@ nav {
 
 .menu-toggle {
   display: none;
-  color: var(--primary);
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -128,7 +132,7 @@ nav {
 /* Banner */
 .banner {
   height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/fondo.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -138,16 +142,20 @@ nav {
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 1.5rem;
 }
 
 .banner-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
 }
 
 .banner-content p {
-  font-size: 1.2rem;
+  font-size: 16px;
   margin-bottom: 1.5rem;
+  color: #ddd;
 }
 
 .banner-content a {
@@ -361,7 +369,7 @@ section.products h2 {
 
 /* Location and Shipping */
 .location, .shipping, .contact {
-  padding: 3rem 0;
+  padding: 6rem 0;
   text-align: center;
 }
 
@@ -480,8 +488,18 @@ footer h3 {
   opacity: 1;
   transition: opacity 0.6s ease;
 }
-
-#splash.fade-out {
+ #splash img { 
+  width: 50px; 
+  height: 50px; 
+}
+  #splash h1 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2rem; 
+    color: #6b4e31; }
+  #splash p { 
+    font-size: 1rem; 
+    color: #333; }
+  #splash.fade-out {
   opacity: 0;
   pointer-events: none;
 }
@@ -675,3 +693,7 @@ footer h3 {
   }
   
 }
+ @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+    }
