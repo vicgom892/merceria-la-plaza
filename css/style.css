@@ -132,7 +132,7 @@ nav {
 /* Banner */
 .banner {
   height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/maquina-de-coser.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -142,7 +142,6 @@ nav {
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding: 1.5rem;
 }
 
 .banner-content h1 {
