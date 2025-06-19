@@ -277,3 +277,5 @@ if(page === 'estampados' || page === 'index') {
     });
   }
 }
+
+

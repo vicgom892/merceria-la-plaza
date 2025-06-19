@@ -23,7 +23,7 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
-
+/*
 header {
   background: #6b4e31; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -31,6 +31,21 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.3s ease;
+  background: #6b4e31; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 nav {
