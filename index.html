@@ -32,11 +32,8 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
-
 </head>
-<body>
+<body data-page="index">
   <!-- Pantalla de carga -->
   <div id="splash">
     <img src="images/logo-la-plaza-1.png" srcset="images/logo-la-plaza-1.png 50w, images/logo-la-plaza-1.png 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
@@ -61,7 +58,10 @@
         <li><a href="#location">Como LLegar</a></li>
       </ul>
       <button id="cart-button" class="cart-btn">
-        <i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)
+         <!-- Carrito SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6b4e31" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10-2h-7v-2h7v2zm-2-6H7v4h8v-4zm4-1h-4V7h4v2zM7 2v2h10v2H7v2l-4-3 4-3z"/>
+      </svg> Carrito (<span id="cart-count">0</span>)
       </button>
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </nav>
@@ -359,26 +359,6 @@
       <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.120517957917!2d-58.89866622437167!3d-34.626394598887096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910e8f01a9b1%3A0x88fe90848cba6976!2sMercer%C3%ADa%20La%20Plaza!5e0!3m2!1ses!2sar!4v1749503100819!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <!--<section class="shipping" id="shipping">
-      <h2>Envíos Flexibles Nacionales e Internacionales</h2>
-      <p>Ofrecemos opciones de envío rápidas y confiables para que recibas tus productos de mercería donde estés.</p>
-      <p>Envíos nacionales e internacionales disponibles. Tiempos de entrega: 1-2 días hábiles (Provincia), 7-15 días (Nacional).</p>
-      <p>Costos varían según peso y destino. ¡Contáctanos para más detalles!</p>
-      <a href="https://wa.me/1234567890" class="cart-buttons"><button>🛵 Consultar Envíos</button></a>
-    </section>
-  -->
-     <!-- <section class="contact" id="contacto">
-        <h2>Contáctanos</h2>
-        <form action="/submit" method="POST">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-          <label for="email">Correo:</label>
-          <input type="email" id="email" name="email" placeholder="Tu correo" required>
-          <label for="message">Mensaje:</label>
-          <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>-->
   </div>
 
     <div id="cart-modal" class="cart-modal hidden" role="dialog" aria-labelledby="cart-title">
@@ -424,19 +404,30 @@
     </div>
 
     <footer>
-      <h3>Mercería La Plaza</h3>
-      <p>Síguenos en nuestras redes sociales:</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram de Mercería La Plaza"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook de Mercería La Plaza"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/1234567890" id="whatsapp_link" aria-label="WhatsApp de Mercería La Plaza"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <p>© 2025 Mercería La Plaza. Todos los derechos reservados.</p>
+        <h3>Mercería La Plaza</h3>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram de Mercería La Plaza"><!-- Instagram SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6b4e31" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.337 3.608 1.312.975.976 1.25 2.243 1.312 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.337 2.633-1.312 3.608-.975.975-2.243 1.25-3.608 1.312-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.337-3.608-1.312-.975-.975-1.25-2.243-1.312-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.337-2.633 1.312-3.608C4.52 2.5 5.787 2.225 7.153 2.163 8.419 2.105 8.799 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.13 4.52.432 3.454 1.498 2.389 2.564 2.086 3.815 2.028 5.096.969 6.378.956 6.787.956 10.045v3.91c0 3.259.013 3.667.072 4.948.058 1.281.361 2.533 1.426 3.599 1.066 1.066 2.317 1.368 3.599 1.426 1.28.059 1.689.072 4.947.072s3.667-.013 4.948-.072c1.281-.058 2.533-.36 3.599-1.426 1.066-1.066 1.368-2.317 1.426-3.599.059-1.28.072-1.689.072-4.947s-.013-3.667-.072-4.948c-.058-1.281-.36-2.533-1.426-3.599-1.066-1.066-2.318-1.368-3.599-1.426C15.667.013 15.259 0 12 0z"/>
+              <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+              <circle cx="18.406" cy="5.594" r="1.44"/>
+            </svg></a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook de Mercería La Plaza"><!-- Facebook SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6b4e31" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.324V1.325C24 .593 23.407 0 22.675 0z"/>
+            </svg></a>
+                <a href="https://wa.me/1234567890" id="whatsapp_link" aria-label="WhatsApp de Mercería La Plaza">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6b4e31" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.372 0 .002 5.372.002 12a11.96 11.96 0 002.37 7.15L0 24l4.93-2.34a11.93 11.93 0 007.07 2.34c6.627 0 12-5.372 12-12 0-3.21-1.25-6.23-3.48-8.52zm-8.05 15.15a8.3 8.3 0 01-4.44-1.23l-.32-.19-2.9.69.73-2.82-.21-.29a8.31 8.31 0 011.26-11.38 8.27 8.27 0 0111.68 0 8.308 8.308 0 011.66 7.53 8.247 8.247 0 01-7.7 6z"/>
+              <path d="M16.63 14.69c-.26-.13-1.53-.75-1.77-.83-.24-.07-.42-.13-.6.13s-.69.83-.85 1c-.16.17-.31.19-.57.06a7.38 7.38 0 01-2.18-1.36 8.07 8.07 0 01-1.5-1.86c-.16-.27-.02-.42.12-.56.13-.13.3-.34.46-.51a1.8 1.8 0 00.26-.43c.09-.15.04-.28-.02-.41-.07-.14-.6-1.44-.82-1.97-.22-.51-.45-.44-.62-.44-.16 0-.34-.01-.52-.01s-.43.06-.66.28a2.7 2.7 0 00-.88.86c-.33.58-1.25 1.22-1.25 2.97 0 1.74 1.28 3.42 1.46 3.66.18.24 2.53 3.86 6.15 5.4a8.13 8.13 0 003.43.54c1.03 0 1.68-.42 2.08-.79a2.93 2.93 0 001.03-2.02c0-1.18-.74-1.74-1.02-1.87z"/>
+            </svg></a>
+        </div>
+              <p>© 2025 Mercería La Plaza. Todos los derechos reservados.</p>
     </footer>
 
-    <script defer src="js/main.js"></script>
-    <script defer src="js/chat.js"></script>
-    <script defer src="js/carousel.js"></script>
+    <script src="js/main.js" defer></script>
+
     <script>
       // Carga diferida para Google Maps
       document.addEventListener('DOMContentLoaded', () => {
