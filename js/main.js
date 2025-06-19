@@ -96,7 +96,7 @@ if(cartButton && cartModal && closeCart && cartItems && cartEmpty && cartTotal &
   });
 
   payMercadoPago.addEventListener('click', () => {
-    alert('Redirigiendo a Mercado Pago... (Funcionalidad simulada)');
+    alert('Redirigiendo a Mercado Pago... (Proximamente)');
   });
 
   // Hacer global para poder llamar desde onclick inline en HTML
