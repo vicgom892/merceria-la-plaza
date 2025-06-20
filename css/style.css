@@ -23,24 +23,16 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
-/*
-header {
-  background: #6b4e31; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-*/
+
+/* Header */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
   transition: transform 0.3s ease;
-  background: #6b4e31; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--primary);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 0.5rem;
 }
 
@@ -49,11 +41,11 @@ header.hide {
 }
 
 nav {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo img {
@@ -68,14 +60,14 @@ nav {
 }
 
 .nav-links li a {
-  text-decoration: none;
-  /*color: #4b5563;*/
+  position: relative;
   color: #ddd;
   font-size: 1rem;
-  position: relative;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
-.nav-links li a span{
+
+.nav-links li a span {
   color: #ff6b6b;
 }
 
@@ -90,13 +82,12 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+.nav-links li a:hover {
+  color: #fff;
 }
 
-.nav-links li a:hover {
-  /*color: var(--primary);*/
-  color: #fff;
+.nav-links li a:hover::after {
+  width: 100%;
 }
 
 .cart-btn {
@@ -124,13 +115,15 @@ nav {
   cursor: pointer;
 }
 
+/* Main Container */
 .main-container {
   max-width: 100%;
   padding-top: 30px;
 }
 
+/* Intro Section */
 .intro {
-  padding: 4rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
@@ -147,52 +140,66 @@ nav {
 /* Banner */
 .banner {
   height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/maquina-de-coser.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #7c5f47;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 6px);
+  background-size: 50px 50px;
+  animation: tela-movimiento 40s linear infinite;
+  will-change: background-position;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #fffbe9;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
+@keyframes tela-movimiento {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, -50px -50px;
+  }
+}
 
 .banner-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
-  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .banner-content p {
-  font-size: 16px;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: #ddd;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .banner-content a {
-  background-color: var(--primary);
-  color: #fff;
+  background-color: #d6b48d;
+  color: #4a2f1b;
   padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 0.375rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s;
 }
 
 .banner-content a:hover {
-  background-color: var(--accent);
-  transform: scale(1.05);
+  background-color: #c49c73;
 }
 
+/* Main */
 main {
   max-width: 1200px;
   width: 90%;
   margin: auto;
 }
 
+/* Products Section */
 section.products {
   padding: 4.5rem 0;
 }
@@ -203,6 +210,7 @@ section.products h2 {
   margin-bottom: 2rem;
 }
 
+/* Section Background with Overlay */
 .section-bg {
   background-size: cover;
   background-position: center;
@@ -212,21 +220,22 @@ section.products h2 {
 .section-bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.7);
+  pointer-events: none;
 }
 
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  position: relative;
   padding-bottom: 20px;
+  position: relative;
 }
 
+/* Product Card */
 .product-card {
   background: var(--bg);
   border: 1px solid #ddd;
@@ -252,12 +261,13 @@ section.products h2 {
   margin: 0.5rem 0;
 }
 
+.price, .product-card p {
+  font-size: 14px;
+}
+
 .price {
   color: var(--primary);
   font-weight: 500;
-}
-.price p{
-  font-size: 14px;
 }
 
 .product-card button {
@@ -275,17 +285,13 @@ section.products h2 {
   background-color: var(--accent);
   transform: scale(1.02);
 }
-.product-card p{
-  font-size: 14px;
-  padding: 5px;
-}
+
+/* Cart Modal */
 .cart-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +332,7 @@ section.products h2 {
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .cart-item button:hover {
@@ -357,6 +364,7 @@ section.products h2 {
   border-radius: 5px;
   cursor: pointer;
   width: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .cart-buttons button:hover {
@@ -371,7 +379,8 @@ section.products h2 {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
+  transition: background-color 0.3s ease;
 }
 
 #close-cart:hover {
@@ -382,9 +391,9 @@ section.products h2 {
   display: none;
 }
 
-/* Location and Shipping */
+/* Location, Shipping, Contact Sections */
 .location, .shipping, .contact {
-  padding: 6rem 0;
+  padding: 6rem 1rem;
   text-align: center;
   max-width: 90%;
   margin: auto;
@@ -408,6 +417,7 @@ section.products h2 {
   border-radius: 5px;
 }
 
+/* Contact form */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -421,6 +431,7 @@ section.products h2 {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  resize: vertical;
 }
 
 .contact button {
@@ -430,12 +441,12 @@ section.products h2 {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
   background: var(--accent);
 }
-
 
 /* Footer */
 footer {
@@ -488,13 +499,11 @@ footer h3 {
   to { transform: translateX(100%); }
 }
 
-/* Splash */
+/* Splash Screen */
 #splash {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
   background: var(--secondary);
   color: var(--primary);
   display: flex;
@@ -505,18 +514,24 @@ footer h3 {
   opacity: 1;
   transition: opacity 0.6s ease;
 }
- #splash img { 
-  width: 50px; 
-  height: 50px; 
+
+#splash img {
+  width: 50px;
+  height: 50px;
 }
-  #splash h1 { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 2rem; 
-    color: #6b4e31; }
-  #splash p { 
-    font-size: 1rem; 
-    color: #333; }
-  #splash.fade-out {
+
+#splash h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+#splash p {
+  font-size: 1rem;
+  color: #333;
+}
+
+#splash.fade-out {
   opacity: 0;
   pointer-events: none;
 }
@@ -527,13 +542,13 @@ footer h3 {
   color: #fff;
   padding: 14px 24px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   z-index: 9999;
   font-family: 'Roboto', sans-serif;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   text-align: center;
   width: max-content;
   margin: 10px;
@@ -563,7 +578,7 @@ footer h3 {
   right: 20px;
   width: 320px;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
@@ -625,7 +640,7 @@ footer h3 {
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 #chatbot-options button:hover {
@@ -654,14 +669,14 @@ footer h3 {
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 #chatbot-form button:hover {
   background: var(--accent);
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   main {
     width: 90%;
@@ -705,17 +720,47 @@ footer h3 {
   .product-grid {
     grid-template-columns: 1fr;
   }
-  footer{
-     margin-bottom: 3rem;
+
+  footer {
+    margin-bottom: 3rem;
   }
-   #chatbot {
-    position: fixed;
-    bottom: 0px;
+
+  #chatbot {
+    bottom: 0;
     right: 50px;
   }
-  
 }
- @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .menu-toggle { display: block; }
-    }
+
+/* Fix menu-toggle display */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+/* Tamaños uniformes para encabezados dentro de secciones semánticas */
+section h1,
+article h1,
+aside h1,
+nav h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+section h2,
+article h2,
+aside h2,
+nav h2 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+section h3,
+article h3,
+aside h3,
+nav h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
