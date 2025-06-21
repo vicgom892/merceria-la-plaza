@@ -125,28 +125,26 @@ window.addEventListener('load', () => {
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", e => {
-  e.preventDefault(); // Evita el banner automático
+  console.log("▶️ beforeinstallprompt fired");
+  e.preventDefault();
   deferredPrompt = e;
-  mostrarBotonInstalacion(); // Función que activa tu botón
-});
-
-function mostrarBotonInstalacion() {
-  const installBtn = document.getElementById("install-button");
-  if (installBtn) {
-    installBtn.removeAttribute("hidden");
-    installBtn.addEventListener("click", async () => {
-      installBtn.setAttribute("hidden", true);
+  const btn = document.getElementById("install-button");
+  if (btn) {
+    btn.hidden = false;
+    btn.addEventListener("click", async () => {
+      btn.hidden = true;
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      console.log("Instalación:", outcome);
+      console.log("Install outcome:", outcome);
       deferredPrompt = null;
     });
   }
-}
+});
 
 window.addEventListener("appinstalled", () => {
-  console.log("✅ App instalada");
+  console.log("✅ App installed");
 });
+
 
 // --- Código específico para la página "index" ---
 if(['index', 'hilos', 'estampados'].includes(page)) {
