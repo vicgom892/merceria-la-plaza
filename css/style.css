@@ -620,7 +620,7 @@ footer h3 {
   }
 }
 
-.install-btn :hover {
+.install-btn:hover {
   background-color: var(--accent);
 }
 

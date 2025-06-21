@@ -279,16 +279,20 @@ if(page === 'estampados' || page === 'index') {
     });
   }
 }
-
+document.addEventListener("DOMContentLoaded", () => {
   const volverBtn = document.querySelector('.btn-volver-arriba');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      volverBtn.classList.add('visible');
-    } else {
-      volverBtn.classList.remove('visible');
-    }
-  });
+  if (volverBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        volverBtn.classList.add('visible');
+      } else {
+        volverBtn.classList.remove('visible');
+      }
+    });
+  }
+});
+
 
 
 

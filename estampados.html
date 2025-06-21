@@ -376,9 +376,7 @@
             <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.120517957917!2d-58.89866622437167!3d-34.626394598887096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910e8f01a9b1%3A0x88fe90848cba6976!2sMercer%C3%ADa%20La%20Plaza!5e0!3m2!1ses!2sar!4v1749503100819!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-        <div id="install-banner" class="install-banner hidden">
-          📲 Instalar la app
-        </div>
+         <button id="install-button" hidden class="install-btn"> 📲 Instalá la App</button>
     
         <div id="chatbot">
           <div id="chatbot-header" onclick="toggleChatbot()">
@@ -456,5 +454,10 @@
               maps.forEach(map => observer.observe(map));
             });
         </script>
+       <a href="#top" class="btn-volver-arriba" aria-label="Volver al inicio">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+  </svg>
+</a>
 </body>
 </html>
