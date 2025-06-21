@@ -623,9 +623,7 @@ footer h3 {
   background-color: var(--accent);
 }
 
-.install-btn.hidden {
-  display: none;
-}/*
+/*
 .install-btn {
   position: fixed;
   bottom: 20px;
