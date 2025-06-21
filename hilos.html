@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mercería La Plaza ofrece hilos, telas, botones y accesorios de costura de alta calidad en General Rodríguez, Buenos Aires. Envíos nacionales e internacionales.">
+  <meta name="description" content="Descubrí hilos de alta calidad para costura, bordado y confección en Mercería La Plaza, General Rodríguez. Amplia variedad de colores y envío a todo el país.">
   <meta name="keywords" content="mercería, hilos, telas, botones, accesorios de costura, General Rodríguez, Buenos Aires, estampados, costura, bordado">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Mercería La Plaza">
@@ -11,18 +11,18 @@
   <meta name="geo.placename" content="General Rodríguez">
   <link rel="canonical" href="https://www.mercerialaplaza.com/">
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Mercería La Plaza - Tu Tienda de Costura en General Rodríguez">
-  <meta property="og:description" content="Encuentra hilos, telas, botones y accesorios de costura de calidad en Mercería La Plaza. Envíos rápidos a todo el país.">
+  <meta property="og:title" content="Hilos para Costura en General Rodríguez | Mercería La Plaza">
+  <meta property="og:description" content="Hilos premium en múltiples colores para costura, bordado y más. Comprá online en Mercería La Plaza con envío a todo el país.">
   <meta property="og:image" content="https://www.mercerialaplaza.com/images/icon-96x96.webp">
   <meta property="og:url" content="https://www.mercerialaplaza.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mercería La Plaza">
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mercería La Plaza - Hilos, Telas y Accesorios de Costura">
-  <meta name="twitter:description" content="Descubre nuestra amplia selección de productos de mercería en General Rodríguez, Buenos Aires.">
+  <meta name="twitter:title" content="Hilos para Costura | Mercería La Plaza">
+  <meta name="twitter:description" content="Explorá nuestra colección de hilos para costura y bordado. Calidad garantizada desde General Rodríguez.">
   <meta name="twitter:image" content="https://www.mercerialaplaza.com/images/icon-96x96.webp">
-  <link rel="icon" href="images/logo-la-plaza-1.png" type="image/webp">
+  <link rel="icon" href="images/logo-buscador.jpeg" type="image/jpeg">
   <title>Mercería La Plaza - Hilos, Telas y Accesorios de Costura en General Rodríguez</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#6b4e31">
@@ -38,15 +38,20 @@
 
     <!-- Pantalla de carga -->
     <div id="splash">
-      <img src="images/logo-la-plaza-1.png" srcset="images/logo-la-plaza-1.png 50w, images/logo-la-plaza-1.png 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
+      <img src="images/logo-merceria-modified.png" srcset="images/logo-merceria-modified.png 50w, images/logo-merceria-modified.png 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="200" height="200">
       <h1>Mercería La Plaza</h1>
       <p>Cargando...</p>
     </div>
 
+    <section id="inicio" class="intro">
+     <h2>Bienvenidos a la Sección de Hilos</h2>
+<p>Descubrí nuestra selección premium de hilos para todos tus proyectos de costura, con calidad garantizada y variedad de colores en Mercería La Plaza, General Rodríguez.</p>
+    </section>
+
   <header>
     <nav role="navigation" aria-label="Menú principal">
       <div class="logo">
-        <img src="images/logo-la-plaza-1.png" srcset="images/logo-la-plaza-1.png 50w, images/logo-la-plaza-1.png 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
+        <img src="images/logo-merceria-modified.png" srcset="images/logo-merceria-modified.png 50w, images/logo-merceria-modified.png 96w" sizes="(max-width: 600px) 50px, 96px" alt="Logo de Mercería La Plaza" width="50" height="50">
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html"><span>Inicio</span></a></li>
@@ -65,15 +70,9 @@
 
     
   <div class="main-container">
-      <section id="inicio" class="intro">
-        <h2>Bienvenidos a Mercería La Plaza</h2>
-        <p>Tu tienda de confianza en General Rodríguez para hilos, telas, botones y accesorios de costura de alta calidad.</p>
-      </section>  
-      <section class="banner">
+      <section class="banner-hilos">
         <div class="banner-content">
-          <h1>Tu Mercería de Confianza en General Rodríguez</h1>
-          <p>Estampados únicos y artículos de calidad para tus proyectos de costura y bordado</p>
-          <a href="#products">Ver Productos</a>
+          <img src="images/banner-sin-fondo.png" alt="">
         </div>
       </section>
        
@@ -409,6 +408,19 @@
     </footer>
 
  <script src="js/main.js" defer></script>
+  <script>
+      const header = document.querySelector('header');
+      const stickyOffset = header.offsetTop;
+    
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > stickyOffset) {
+          header.classList.add('sticky-active');
+        } else {
+          header.classList.remove('sticky-active');
+        }
+      });
+    </script>
+
 
     <script>
       document.querySelectorAll('.rating').forEach(rating => {

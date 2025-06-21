@@ -201,7 +201,7 @@ h2 {
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
-
+/*
 .estampados-section {
   padding: 4.5rem 20px;
   text-align: center;
@@ -221,7 +221,14 @@ h2 {
     background-position: 100px 100px, -100px -100px;
   }
 }
-
+*/
+.estampados-section{
+  background-image: url(/images/banner-liso.jpeg);
+  background-size: cover;
+  background-position: center;
+  height:auto;
+  background-attachment: fixed;
+}
 .estampados-section h2 {
   font-size: 2.3rem;
   margin-bottom: 20px;

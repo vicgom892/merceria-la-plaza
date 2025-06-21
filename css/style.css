@@ -25,7 +25,7 @@ h1, h2, h3 {
 }
 
 /* Header */
-header {
+/*header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -34,7 +34,39 @@ header {
   background: var(--primary);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 0.5rem;
+}*/
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  padding: 20px 10px;
+  z-index: 999;
+ 
+  box-shadow: none;
 }
+
+/* Cuando está sticky y activo */
+header.sticky-active {
+  background-color: #6b4e31;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Logo dentro del header */
+header .logo img {
+  width: 50px;
+  height: 50px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Logo más grande cuando sticky */
+header.sticky-active .logo img {
+  width: 80px;
+  height: 80px;
+}
+
 
 header.hide {
   transform: translateY(-100%);
@@ -138,6 +170,7 @@ nav {
 }
 
 /* Banner */
+/*
 .banner {
   height: 400px;
   background-color: #7c5f47;
@@ -165,7 +198,34 @@ nav {
     background-position: 50px 50px, -50px -50px;
   }
 }
-
+*/
+.banner{
+  background-image: url(/images/banner-liso.jpeg);
+ background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.banner-estampados{
+  background-image: url(/images/banner-liso.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.banner-hilos{
+  background-image: url(/images/banner-liso.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.banner-content img{
+  width: 100%;
+}
 .banner-content h1 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -516,8 +576,8 @@ footer h3 {
 }
 
 #splash img {
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  height: 200px;
 }
 
 #splash h1 {
@@ -594,6 +654,7 @@ footer h3 {
   align-items: center;
   gap: 10px;
   font-size: 16px;
+  justify-content: center;
 }
 
 #chatbot-body {
@@ -682,7 +743,9 @@ footer h3 {
     width: 90%;
   }
 
-  .banner {
+  .banner,
+  .banner-estampados,
+  .banner-hilos {
     height: 380px;
   }
 
@@ -727,7 +790,10 @@ footer h3 {
 
   #chatbot {
     bottom: 0;
-    right: 50px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 0px;
   }
 }
 
