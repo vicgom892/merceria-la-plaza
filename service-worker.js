@@ -1,4 +1,4 @@
-const CACHE_NAME = "merceria-cache-v5";
+const CACHE_NAME = "merceria-cache-v6";
 const urlsToCache = [
   "./",
   "./index.html",
@@ -14,67 +14,68 @@ const urlsToCache = [
   "./estampados.html"
 ];
 
+// Límite opcional de objetos en caché
+const MAX_CACHE_ITEMS = 50;
+
+async function cleanCache(cache) {
+  const keys = await cache.keys();
+  if (keys.length > MAX_CACHE_ITEMS) {
+    await cache.delete(keys[0]); // elimina el más antiguo
+  }
+}
+
 // Instalación: precarga de recursos
 self.addEventListener("install", event => {
-  self.skipWaiting(); // Activar inmediatamente
+  self.skipWaiting();
   event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      for (const url of urlsToCache) {
-        try {
-          await cache.add(url);
-        } catch (err) {
-          console.warn(`❌ No se pudo cachear: ${url}`, err);
-        }
-      }
-    })()
+    caches.open(CACHE_NAME).then(cache =>
+      cache.addAll(urlsToCache).catch(err => {
+        console.warn("❌ Error en cache.addAll", err);
+      })
+    )
   );
 });
 
-// Activación: limpieza de cachés anteriores
+// Activación: limpiar versiones anteriores
 self.addEventListener("activate", event => {
-  self.clients.claim(); // Control inmediato de las pestañas
+  self.clients.claim();
   event.waitUntil(
-    (async () => {
-      const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames
-          .filter(name => name !== CACHE_NAME)
-          .map(name => caches.delete(name))
-      );
-    })()
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
+      )
+    )
   );
 });
 
-// Fetch: red, caché o fallback
+// Fetch: red primero, luego caché, fallback offline
 self.addEventListener("fetch", event => {
   const req = event.request;
 
   event.respondWith(
     (async () => {
-      // Páginas HTML
+      // HTML navigation
       if (req.mode === "navigate" || (req.method === "GET" && req.headers.get("accept")?.includes("text/html"))) {
         try {
-          const networkResponse = await fetch(req);
-          return networkResponse;
-        } catch (error) {
-          console.warn("🔌 Sin conexión para:", req.url);
+          const netRes = await fetch(req);
+          return netRes;
+        } catch {
           return caches.match("./offline.html");
         }
       }
 
-      // Recursos estáticos
-      const cachedResponse = await caches.match(req);
-      if (cachedResponse) return cachedResponse;
+      // Otros archivos estáticos
+      const cached = await caches.match(req);
+      if (cached) return cached;
 
       try {
-        const networkResponse = await fetch(req);
+        const netRes = await fetch(req);
         const cache = await caches.open(CACHE_NAME);
-        cache.put(req, networkResponse.clone());
-        return networkResponse;
-      } catch (error) {
-        console.warn("⚠️ Fallo en recurso estático:", req.url);
-        return new Response("Recurso no disponible sin conexión", {
+        cache.put(req, netRes.clone());
+        cleanCache(cache); // control de tamaño
+        return netRes;
+      } catch {
+        return new Response("⚠️ Recurso no disponible sin conexión", {
           status: 503,
           statusText: "Service Unavailable",
           headers: { "Content-Type": "text/plain" }
