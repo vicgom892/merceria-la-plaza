@@ -122,29 +122,31 @@ window.addEventListener('load', () => {
 });
 
 // --- PWA Install banner ---
-const installBanner = document.getElementById('install-banner');
 let deferredPrompt;
 
-if(installBanner) {
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBanner.classList.remove('hidden');
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault(); // Evita el banner automático
+  deferredPrompt = e;
+  mostrarBotonInstalacion(); // Función que activa tu botón
+});
 
-    installBanner.addEventListener('click', () => {
-      installBanner.classList.add('hidden');
+function mostrarBotonInstalacion() {
+  const installBtn = document.getElementById("install-button");
+  if (installBtn) {
+    installBtn.removeAttribute("hidden");
+    installBtn.addEventListener("click", async () => {
+      installBtn.setAttribute("hidden", true);
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(choice => {
-        if (choice.outcome === 'accepted') {
-          console.log('Usuario aceptó instalar la app');
-        } else {
-          console.log('Usuario rechazó la instalación');
-        }
-        deferredPrompt = null;
-      });
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log("Instalación:", outcome);
+      deferredPrompt = null;
     });
-  });
+  }
 }
+
+window.addEventListener("appinstalled", () => {
+  console.log("✅ App instalada");
+});
 
 // --- Código específico para la página "index" ---
 if(['index', 'hilos', 'estampados'].includes(page)) {
