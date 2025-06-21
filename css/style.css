@@ -39,7 +39,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: #b87d50;
   transition: background-color 0.3s ease, padding 0.3s ease;
   padding: 20px 10px;
   z-index: 999;
@@ -149,7 +149,6 @@ nav {
 /* Main Container */
 .main-container {
   max-width: 100%;
-  padding-top: 30px;
 }
 
 /* Intro Section */
