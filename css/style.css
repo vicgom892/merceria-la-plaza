@@ -205,7 +205,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: auto;
 }
 .banner-estampados{
   background-image: url(/images/banner-liso.jpeg);
@@ -213,7 +213,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: auto;
 }
 .banner-hilos{
   background-image: url(/images/banner-liso.jpeg);
@@ -221,7 +221,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: auto;
 }
 .banner-content img{
   width: 100%;
@@ -746,7 +746,7 @@ footer h3 {
   .banner,
   .banner-estampados,
   .banner-hilos {
-    height: 380px;
+    height: auto;
   }
 
   .banner-content h1 {

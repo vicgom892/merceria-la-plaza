@@ -265,10 +265,12 @@ h2 {
 }
 .producto-card img {
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
+    width: 100%;
 }
 .producto-info {
     padding: 20px;
+    text-align: center;
 }
 .producto-info h3 {
     font-size: 1.5rem;
@@ -288,7 +290,7 @@ h2 {
     text-decoration: none;
     border-radius: 25px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    text-align: center;
 }
 .cta-button:hover {
     background-color: #d4a373;
@@ -313,6 +315,7 @@ h2 {
     }
     .estampados-section p{
       font-size: 15px;
+      text-align: center;
     }
     .grid {
      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
