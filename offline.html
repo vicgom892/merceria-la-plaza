@@ -1,33 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sin conexión | Mercería La Plaza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sin Conexión - Mercería La Plaza</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding: 2rem;
       background-color: #f5e6cc;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      padding: 50px 20px;
       color: #6b4e31;
     }
-    img {
-      max-width: 150px;
-      margin-bottom: 1rem;
+
+    .offline-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      border: 2px dashed #d4a373;
+      border-radius: 12px;
+      background-color: #fffaf3;
     }
-    h1 {
-      font-size: 2rem;
+
+    .offline-container img {
+      max-width: 120px;
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 1.1rem;
+
+    .offline-container h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .offline-container p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .offline-container a {
+      display: inline-block;
+      background-color: #d4a373;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .offline-container a:hover {
+      background-color: #c58e59;
     }
   </style>
 </head>
 <body>
-  <img src="images/logo-la-plaza-1.png" alt="Mercería La Plaza">
-  <h1>¡Sin conexión!</h1>
-  <p>No pudimos cargar el contenido porque no tienes conexión a internet.</p>
-  <p>Por favor, vuelve a intentarlo cuando tengas señal.</p>
+  <div class="offline-container">
+    <img src="images/icon-192x192.png" alt="Logo Mercería La Plaza">
+    <h1>Estás sin conexión</h1>
+    <p>No pudimos cargar la página. Pero tu creatividad siempre está encendida 🌟</p>
+    <a href="index.html">Volver al inicio</a>
+    <a href="https://wa.me/5491123456789">WhatsApp</a>
+  </div>
 </body>
 </html>

@@ -55,12 +55,25 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     (async () => {
       // HTML navigation
-      if (req.mode === "navigate" || (req.method === "GET" && req.headers.get("accept")?.includes("text/html"))) {
+      if (
+        req.mode === "navigate" ||
+        (req.method === "GET" &&
+          req.headers.get("accept")?.includes("text/html"))
+      ) {
         try {
           const netRes = await fetch(req);
           return netRes;
         } catch {
-          return caches.match("./offline.html");
+          const fallback = await caches.match("./offline.html");
+          if (fallback) return fallback;
+
+          // fallback alternativo si no se encuentra offline.html
+          return new Response(
+            `<h1>Estás sin conexión</h1><p>No se pudo cargar esta página.</p>`,
+            {
+              headers: { "Content-Type": "text/html" }
+            }
+          );
         }
       }
 
