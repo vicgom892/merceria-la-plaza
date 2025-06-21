@@ -15,7 +15,7 @@ const cartCount = document.getElementById('cart-count');
 const sendWhatsApp = document.getElementById('send-whatsapp');
 const payMercadoPago = document.getElementById('pay-mercadopago');
 
-if(menuToggle && navLinks) {
+if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
@@ -29,9 +29,8 @@ if(menuToggle && navLinks) {
   });
 }
 
-// --- Código carrito (en páginas donde exista) ---
-if(cartButton && cartModal && closeCart && cartItems && cartEmpty && cartTotal && cartCount && sendWhatsApp && payMercadoPago) {
-
+// Carrito
+if (cartButton && cartModal && closeCart && cartItems && cartEmpty && cartTotal && cartCount && sendWhatsApp && payMercadoPago) {
   function addToCart(product) {
     cart.push(product);
     updateCart();
@@ -91,20 +90,19 @@ if(cartButton && cartModal && closeCart && cartItems && cartEmpty && cartTotal &
       message += `- ${item.name}: $${item.price} ARS\n`;
     });
     message += `Total: $${cart.reduce((sum, item) => sum + item.price, 0)} ARS`;
-    const url = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`; // Cambiar número
     window.open(url, '_blank');
   });
 
   payMercadoPago.addEventListener('click', () => {
-    alert('Redirigiendo a Mercado Pago... (Proximamente)');
+    alert('Redirigiendo a Mercado Pago... (Próximamente)');
   });
 
-  // Hacer global para poder llamar desde onclick inline en HTML
   window.addToCart = addToCart;
   window.removeFromCart = removeFromCart;
 }
 
-// --- Código para splash screen y service worker (todas las páginas) ---
+// Splash y registro Service Worker
 window.addEventListener('load', () => {
   const splash = document.getElementById('splash');
   if (splash) {
@@ -121,7 +119,7 @@ window.addEventListener('load', () => {
   }
 });
 
-// --- PWA Install banner ---
+// Instalación PWA
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", e => {
@@ -145,9 +143,22 @@ window.addEventListener("appinstalled", () => {
   console.log("✅ App installed");
 });
 
+// Código para "volver arriba" botón
+document.addEventListener("DOMContentLoaded", () => {
+  const volverBtn = document.querySelector('.btn-volver-arriba');
+  if (volverBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        volverBtn.classList.add('visible');
+      } else {
+        volverBtn.classList.remove('visible');
+      }
+    });
+  }
+});
 
-// --- Código específico para la página "index" ---
-if(['index', 'hilos', 'estampados'].includes(page)) {
+// Código de carrusel, chatbot, modal imágenes según página
+if (['index', 'hilos', 'estampados'].includes(page)) {
   // Carrusel testimonios
   const testimonialsWrapper = document.querySelector('.testimonials-wrapper');
   const testimonials = document.querySelectorAll('.testimonial');
@@ -156,7 +167,7 @@ if(['index', 'hilos', 'estampados'].includes(page)) {
   const dots = document.querySelectorAll('.dot');
   let currentIndex = 0;
 
-  if(testimonialsWrapper && prevButton && nextButton && dots.length) {
+  if (testimonialsWrapper && prevButton && nextButton && dots.length) {
     function updateTestimonials() {
       testimonialsWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
       dots.forEach((dot, index) => {
@@ -181,30 +192,29 @@ if(['index', 'hilos', 'estampados'].includes(page)) {
       });
     });
 
-    // Auto-avance cada 5 segundos
     setInterval(() => {
       currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
       updateTestimonials();
     }, 5000);
   }
-  
+
   // Chatbot toggle
-  window.toggleChatbot = function() {
+  window.toggleChatbot = function () {
     const body = document.getElementById('chatbot-body');
-    if(body) {
+    if (body) {
       body.style.display = body.style.display === 'none' ? 'block' : 'none';
     }
   };
 
   // Funciones chatbot
-  window.sendPredefinedMsg = function(text) {
+  window.sendPredefinedMsg = function (text) {
     addUserMessage(text);
     botReply(getBotResponse(text));
   };
 
   function addUserMessage(text) {
     const container = document.getElementById('chatbot-messages');
-    if(!container) return;
+    if (!container) return;
     const msg = document.createElement('div');
     msg.classList.add('user-message');
     msg.textContent = text;
@@ -214,7 +224,7 @@ if(['index', 'hilos', 'estampados'].includes(page)) {
 
   function botReply(text) {
     const container = document.getElementById('chatbot-messages');
-    if(!container) return;
+    if (!container) return;
     const msg = document.createElement('div');
     msg.classList.add('bot-message');
     msg.textContent = text;
@@ -232,7 +242,7 @@ if(['index', 'hilos', 'estampados'].includes(page)) {
     return responses[userText] || 'Disculpá, no entendí tu consulta. Por favor, escribila abajo y te responderemos por WhatsApp.';
   }
 
-  window.sendUserMessage = function(event) {
+  window.sendUserMessage = function (event) {
     event.preventDefault();
     const name = document.getElementById('user-name')?.value.trim();
     const message = document.getElementById('user-message')?.value.trim();
@@ -240,25 +250,25 @@ if(['index', 'hilos', 'estampados'].includes(page)) {
       alert('Por favor completá tu nombre y consulta.');
       return false;
     }
-    const whatsappNumber = '1234567890'; // Actualiza con el número real
+    const whatsappNumber = '1234567890'; // Cambiar número
     const text = `Hola, soy ${name} y quiero consultar: ${message}`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
-    if(document.getElementById('user-name')) document.getElementById('user-name').value = '';
-    if(document.getElementById('user-message')) document.getElementById('user-message').value = '';
+    if (document.getElementById('user-name')) document.getElementById('user-name').value = '';
+    if (document.getElementById('user-message')) document.getElementById('user-message').value = '';
     window.toggleChatbot();
     return false;
   };
 }
 
-// --- Código para modal imágenes en páginas que lo tengan ---
-if(page === 'estampados' || page === 'index') {
+// Modal imágenes para index y estampados
+if (page === 'estampados' || page === 'index') {
   const imagenes = document.querySelectorAll('.producto img');
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
   const closeModal = document.getElementById('closeModal');
 
-  if(imagenes.length && modal && modalImg && closeModal) {
+  if (imagenes.length && modal && modalImg && closeModal) {
     imagenes.forEach(img => {
       img.addEventListener('click', () => {
         modal.style.display = 'flex';
@@ -277,20 +287,3 @@ if(page === 'estampados' || page === 'index') {
     });
   }
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const volverBtn = document.querySelector('.btn-volver-arriba');
-
-  if (volverBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        volverBtn.classList.add('visible');
-      } else {
-        volverBtn.classList.remove('visible');
-      }
-    });
-  }
-});
-
-
-
-
