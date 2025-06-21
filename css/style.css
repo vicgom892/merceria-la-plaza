@@ -200,7 +200,7 @@ nav {
 }
 */
 .banner{
-  background-image: url(/images/banner-liso.jpeg);
+  background-image: url(../images/banner-liso.jpeg);
  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -208,7 +208,7 @@ nav {
   height: auto;
 }
 .banner-estampados{
-  background-image: url(/images/banner-liso.jpeg);
+  background-image: url(../images/banner-liso.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -216,7 +216,7 @@ nav {
   height: auto;
 }
 .banner-hilos{
-  background-image: url(/images/banner-liso.jpeg);
+  background-image: url(../images/banner-liso.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

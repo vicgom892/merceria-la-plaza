@@ -223,7 +223,7 @@ h2 {
 }
 */
 .estampados-section{
-  background-image: url(/images/banner-liso.jpeg);
+  background-image: url(../images/banner-liso.jpeg);
   background-size: cover;
   background-position: center;
   height:auto;
